@@ -142,6 +142,7 @@ body.scale-cv {
 .scale-cv .home_img {
   width: 130px;
   height: 130px;
+  object-fit: cover;
 }
 
 .scale-cv .home_data,
@@ -425,6 +426,10 @@ a.home_information:hover {
   color: var(--text-color-light);
 }
 
+.company-name{
+  font-size: var(--h2-font-size);
+}
+
 .profile_lg {
   display: none;
 }
@@ -439,6 +444,10 @@ a.home_information:hover {
 .experience_title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-semi-bold);
+}
+
+.experience .experience_data .experience_title{
+  font-style: italic;
 }
 
 .education_studies,
@@ -527,15 +536,25 @@ h4.skills_category_title {
   margin-bottom: var(--mb-2);
 }
 
+.certificates_container{
+  margin-bottom: 2rem;
+}
+
 .certificates_link {
   color: var(--text-color);
   transition: 0.3s;
-  padding-bottom: 0.25rem;
+  padding: 0.5rem .8rem;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: var(--container-color-alt);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .certificates_link:hover {
   color: var(--text-color-light);
-  border-bottom: 1px solid var(--text-color-light);
 }
 
 .certificates_link_content {
@@ -546,6 +565,7 @@ h4.skills_category_title {
   color: var(--text-color-light);
 }
 
+.experience_data .company-work-description,
 .certificates_description {
   font-weight: var(--font-light);
   line-height: 1.6rem;
@@ -661,7 +681,7 @@ h4.skills_category_title {
 
   .resume_left,
   .resume_right {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
   .section_title,

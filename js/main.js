@@ -129,28 +129,32 @@ let areaCV = document.getElementById("area-cv");
 
 const resumeBtn = document.getElementById("resume-btn");
 
-// * HTML2PDF OPTION
-let opt = {
-  margin: -3,
-  filename: "resumeCV.pdf",
-  image: { type: "jpeg", quality: 0.98 },
-  html2canvas: { scale: 4, width: 836, height: 1172 },
-  jsPDF: { format: "a4", orientation: "portrait" },
+resumeBtn.onclick = () => {
+  window.open("assets/CV/A.A Ngr Rageshwara Bhaskarawarman-resume.pdf");
 };
 
-// * call areaCV and html2PDF options
-function generateResume() {
-  html2pdf(areaCV, opt);
-}
+// * HTML2PDF OPTION
+// let opt = {
+//   margin: -3,
+//   filename: "resumeCV.pdf",
+//   image: { type: "jpeg", quality: 0.98 },
+//   html2canvas: { scale: 4, width: 836, height: 1172 },
+//   jsPDF: { format: "a4", orientation: "portrait" },
+// };
 
-// ? CLICK TO resize CV
-resumeBtn.addEventListener("click", () => {
-  // ? add class .scale-cv to body tag
-  scaleCV();
+// // * call areaCV and html2PDF options
+// function generateResume() {
+//   html2pdf(areaCV, opt);
+// }
 
-  // ? the PDF is generated
-  generateResume();
+// // ? CLICK TO resize CV
+// resumeBtn.addEventListener("click", () => {
+//   // ? add class .scale-cv to body tag
+//   scaleCV();
 
-  // ? setTimeOut to remove scale
-  setTimeout(removeScaleCV, 5000);
-});
+//   // ? the PDF is generated
+//   generateResume();
+
+//   // ? setTimeOut to remove scale
+//   setTimeout(removeScaleCV, 5000);
+// });
